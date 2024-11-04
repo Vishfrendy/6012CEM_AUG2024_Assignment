@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Allison&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F5F5F5;
+        }
+
+        .logo {
+            font-family: 'Allison', cursive;
+            font-size: 40px;
+            color: #000000;
+            -webkit-text-stroke: 1px #005F73;
+        }
+		
+		.profile-pic {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 3px solid #2C3E50;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-header h1 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        .contact-header p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .contact-info, .contact-form {
+            padding: 20px;
+        }
+
+        .contact-info h3 {
+            font-size: 24px;
+            color: #005F73;
+            margin-bottom: 10px;
+        }
+
+        .contact-info p {
+            color: #555;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .contact-info a {
+            color: #005F73;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .form-control, .btn {
+            border-radius: 5px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .btn-primary {
+            background-color: #005F73;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #003f4d;
+        }
+
+        footer {
+            background-color: #2C3E50;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            height: 245px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+	<header class="d-flex justify-content-between align-items-center p-3 shadow-sm" style="height: 70px;">
+		<div class="logo ml-3">HomeBound</div>
+		<nav class="nav" style="position: relative; right: 30px;">
+			<a class="nav-link font-weight-bold text-dark" href="AboutUs.html">About Us</a>
+			<a class="nav-link font-weight-bold text-dark" href="Buy.html">Buy</a>
+			<a class="nav-link font-weight-bold text-dark" href="Rent.html">Rent</a>
+			<a class="nav-link font-weight-bold text-dark" href="FindAgent.html">Find Agent</a>
+			<a class="nav-link font-weight-bold text-dark" href="Mortgages.html">Mortgages</a>
+			<a class="nav-link font-weight-bold text-dark" href="ContactUs.html">Contact Us</a>
+		</nav>
+		<a href="UserProfile.html" target="_blank">
+			<img src="pfp.jpg" alt="Profile Picture" class="profile-pic mr-3">
+		</a>
+	</header>    
+
+    <!-- CONTACT US SECTION -->
+    <div class="contact-container">
+        <div class="contact-header">
+            <h1>Contact Us</h1>
+            <p>We're here to help! Reach out with any inquiries about our properties, services, or general questions.</p>
+        </div>
+        
+        <div class="row">
+            <!-- Contact Information -->
+            <div class="col-md-5 contact-info">
+                <h3>Contact Information</h3>
+                <p><strong>Office Address:</strong></p>
+                <p>HomeBound (Malaysia) Sdn. Bhd.<br>
+                   No. 123, Jalan Bangsar,<br>
+                   59100 Kuala Lumpur, Malaysia</p>
+                <p><strong>Phone:</strong> <a href="tel:+60312345678">+603 1234 5678</a></p>
+                <p><strong>Email:</strong> <a href="mailto:info@homebound.com">info@homebound.com</a></p>
+                <p><strong>Working Hours:</strong> Mon - Fri, 9:00 AM - 6:00 PM</p>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-md-7 contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="Your Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+	<footer class="text-white pt-4">
+		<div class="container">
+			<div class="row" style="width: 1425px;">
+				<div class="col-md-4">
+					<ul class="list-unstyled text-left">
+						<li><a href="#" class="text-white">About Us</a></li>
+						<li><a href="#" class="text-white">Our Products</a></li>
+						<li><a href="#" class="text-white">Careers</a></li>
+						<li><a href="#" class="text-white">Newsroom</a></li>
+						<li><a href="#" class="text-white">Contact Us</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4 mb-4">
+					<ul class="list-unstyled text-left">
+						<li><a href="#" class="text-white">Share Feedback</a></li>
+						<li><a href="#" class="text-white">Mortgage Tools</a></li>
+						<li><a href="#" class="text-white">Agent Directory</a></li>
+						<li><a href="#" class="text-white">Property Guides</a></li>
+						<li><a href="#" class="text-white">Properties For Buy</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4 mb-4">
+					<ul class="list-unstyled text-left">
+						<li><a href="#" class="text-white">Properties For Rent</a></li>
+						<li><a href="#" class="text-white">Terms of Service</a></li>
+						<li><a href="#" class="text-white">Privacy Policy</a></li>
+						<li><a href="#" class="text-white">Terms of Purchase</a></li>
+						<li><a href="#" class="text-white">Acceptable Use Policy</a></li>
+					</ul>
+				</div>
+			</div>
+			<hr class="solid" style="background-color: #ffffff; width: 1906px; position: relative; right: 400px; bottom: 25px;">
+			<p style="position: relative; bottom: 25px;">&copy; 2024 HomeBound (Malaysia) Sdn. Bhd. 201001036744 (920667-W) All rights reserved</p>
+		</div>
+	</footer>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us - HomeBound</title>
+        <link href="https://fonts.googleapis.com/css2?family=Allison&display=swap" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #F5F5F5;
+            }
+
+            .logo {
+                font-family: 'Allison', cursive;
+                font-size: 40px;
+                color: #000000;
+                -webkit-text-stroke: 1px #005F73;
+            }
+
+            .profile-pic {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: 3px solid #2C3E50;
+            }
+
+            .section1 {
+                background-color: #005F73;
+                color: white;
+                padding: 60px 20px;
+                text-align: center;
+            }
+
+            .section1 h2 {
+                font-size: 2.5rem;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+
+            .section1 p {
+                font-size: 1.2rem;
+                max-width: 700px;
+                margin: 0 auto 20px;
+            }
+
+            .cta-button {
+                background-color: #FF7F11;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 5px;
+                text-decoration: none;
+                font-weight: bold;
+                transition: background-color 0.3s ease;
+            }
+
+            .cta-button:hover {
+                background-color: #FF9F1C;
+                color: white;
+            }
+
+            /* Mission and Vision Section */
+            .section-mission-vision {
+                background-color: #FFFFFF;
+                padding: 60px 0;
+            }
+
+            .section-mission-vision h2 {
+                color: #005F73;
+                font-weight: bold;
+            }
+
+            .mission, .vision {
+                background-color: #F0F8FF;
+                border-radius: 10px;
+                padding: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+            }
+
+            .mission:hover, .vision:hover {
+                transform: scale(1.05);
+            }
+
+            .mission h3, .vision h3 {
+                color: #005F73;
+                font-size: 1.5rem;
+            }
+
+            /* Team Section */
+            .section-team {
+                background-color: #EFEFEF;
+                padding: 60px 0;
+            }
+
+            .section-team h2 {
+                color: #005F73;
+                font-weight: bold;
+            }
+
+            .team-member {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .team-member img {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                border: 3px solid #005F73;
+                transition: transform 0.3s ease;
+            }
+
+            .team-member img:hover {
+                transform: scale(1.1);
+            }
+
+            .team-member h4 {
+                color: #005F73;
+                margin-top: 15px;
+            }
+
+            .team-member p {
+                color: #555;
+            }
+
+            /* Testimonials Section */
+            .section-testimonials {
+                background-color: #FFFFFF;
+                padding: 60px 0;
+                text-align: center;
+            }
+
+            .section-testimonials h2 {
+                color: #005F73;
+                font-weight: bold;
+            }
+
+            .testimonial {
+                background-color: #FFEDD5;
+                border-radius: 10px;
+                padding: 20px 20px 5px 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                max-width: 400px;
+                margin: 20px auto;
+            }
+
+            .testimonial p {
+                font-style: italic;
+                color: #333;
+            }
+
+            /* FAQ Section */
+            .section-faq {
+				background-color: #F8F9FA;
+				padding: 60px 0;
+			}
+
+			.section-faq h2 {
+				color: #005F73;
+				font-weight: bold;
+				text-align: center;
+				margin-bottom: 40px;
+			}
+
+			.faq-item {
+				background-color: #FFFFFF;
+				border-radius: 8px;
+				padding: 20px;
+				margin-bottom: 20px;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				transition: all 0.3s ease;
+			}
+
+			.faq-item:hover {
+				background-color: #E6F7FF;
+				transform: scale(1.02);
+				box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+			}
+
+			.faq-item h5 {
+				color: #005F73;
+				font-weight: bold;
+			}
+
+			.faq-item p {
+				color: #333;
+				margin-top: 10px;
+			}
+
+            footer {
+                background-color: #2C3E50;
+                color: white;
+                padding: 40px 0;
+                text-align: center;
+				height: 245px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- HEADER -->
+        <header class="d-flex justify-content-between align-items-center p-3 shadow-sm" style="height: 70px;">
+            <div class="logo ml-3">HomeBound</div>
+            <nav class="nav" style="position: relative; right: 30px;">
+                <a class="nav-link font-weight-bold text-dark" href="AboutUs.html">About Us</a>
+                <a class="nav-link font-weight-bold text-dark" href="Buy.html">Buy</a>
+                <a class="nav-link font-weight-bold text-dark" href="Rent.html">Rent</a>
+                <a class="nav-link font-weight-bold text-dark" href="FindAgent.html">Find Agent</a>
+                <a class="nav-link font-weight-bold text-dark" href="Mortgages.html">Mortgages</a>
+                <a class="nav-link font-weight-bold text-dark" href="ContactUs.html">Contact Us</a>
+            </nav>
+            <a href="UserProfile.html" target="_blank">
+				<img src="pfp.jpg" alt="Profile Picture" class="profile-pic mr-3">
+			</a>
+        </header>      
+
+        <!-- SECTION 1 -->
+        <section class="section1">
+            <h2>Your Dream Home Awaits</h2>
+            <p>With HomeBound, finding a home has never been easier. Explore Malaysia's finest properties and make your dream a reality.</p>
+            <a href="#" class="cta-button">Start Exploring</a>
+        </section>
+
+        <!-- MISSION AND VISION SECTION -->
+        <section class="section-mission-vision text-center">
+            <div class="container">
+                <h2>Our Mission & Vision</h2>
+                <div class="row mt-4">
+                    <div class="col-md-6 mission" style="right: 12px;">
+                        <h3>Our Mission</h3>
+                        <p>To empower individuals and families to find the perfect home by providing transparent, reliable, and accessible property listings and resources.</p>
+                    </div>
+                    <div class="col-md-6 vision" style="left: 12px;">
+                        <h3>Our Vision</h3>
+                        <p>To be the most trusted property platform in Malaysia, transforming the real estate journey with innovative solutions and unparalleled service.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEAM SECTION -->
+        <section class="section-team text-center">
+            <div class="container">
+                <h2>Meet the Team</h2>
+                <div class="row mt-4">
+                    <div class="col-md-4 team-member">
+                        <img src="team_member_1.png" alt="Team Member">
+                        <h4>Vanessa Kang</h4>
+                        <p>Founder & CEO</p>
+                    </div>
+                    <div class="col-md-4 team-member">
+                        <img src="team_member_2.jpg" alt="Team Member">
+                        <h4>Minji Kim</h4>
+                        <p>Head of Marketing</p>
+                    </div>
+                    <div class="col-md-4 team-member">
+                        <img src="team_member_3.jpg" alt="Team Member">
+                        <h4>Danielle Marsh</h4>
+                        <p>Lead Developer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+		<section class="section-testimonials">
+			<h2>What Our Customers Say</h2>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="testimonial">
+							<p>"HomeBound made it so easy for us to find our first home. Their support team was amazing, and the process was seamless from start to finish!"</p>
+							<p>- Aiman R.</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="testimonial">
+							<p>"I've been searching for a property for months, and HomeBound had all the listings I needed. Highly recommended for anyone looking to buy or rent."</p>
+							<p>- Sarah L.</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="testimonial">
+							<p>"Thanks to HomeBound, I found my dream apartment quickly and easily. The website's layout and functionality made my search smooth and enjoyable."</p>
+							<p>- Alex T.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+        <!-- FAQ SECTION -->
+		<section class="section-faq">
+			<h2>Frequently Asked Questions</h2>
+			<div class="container">
+				<div class="faq-item">
+					<h5>How can I contact support?</h5>
+					<p>Our support team is available 24/7. You can reach out via email, phone, or the contact form on our website.</p>
+				</div>
+				<div class="faq-item">
+					<h5>Are all listings verified?</h5>
+					<p>Yes, we thoroughly verify all listings to ensure they meet our standards of accuracy and reliability.</p>
+				</div>
+				<div class="faq-item">
+					<h5>How do I schedule a property viewing?</h5>
+					<p>Simply click on the listing and select "Schedule Viewing." You can choose a date and time that works best for you.</p>
+				</div>
+				<div class="faq-item">
+					<h5>Is there a fee for using HomeBound?</h5>
+					<p>No, browsing and contacting property listings is free. We charge a small fee for premium features, if you choose to use them.</p>
+				</div>
+				<div class="faq-item">
+					<h5>Can I list my property on HomeBound?</h5>
+					<p>Absolutely! Just register as a seller or agent and follow the steps in our listing guide to publish your property.</p>
+				</div>
+			</div>
+		</section>
+
+
+        <!-- FOOTER -->
+        <footer class="text-white pt-4">
+            <div class="container">
+                <div class="row" style="width: 1425px;">
+                    <div class="col-md-4">
+                        <ul class="list-unstyled text-left">
+                            <li><a href="#" class="text-white">About Us</a></li>
+                            <li><a href="#" class="text-white">Our Products</a></li>
+                            <li><a href="#" class="text-white">Careers</a></li>
+                            <li><a href="#" class="text-white">Newsroom</a></li>
+                            <li><a href="#" class="text-white">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <ul class="list-unstyled text-left">
+                            <li><a href="#" class="text-white">Share Feedback</a></li>
+                            <li><a href="#" class="text-white">Mortgage Tools</a></li>
+                            <li><a href="#" class="text-white">Agent Directory</a></li>
+                            <li><a href="#" class="text-white">Property Guides</a></li>
+                            <li><a href="#" class="text-white">Properties For Buy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <ul class="list-unstyled text-left">
+                            <li><a href="#" class="text-white">Properties For Rent</a></li>
+                            <li><a href="#" class="text-white">Terms of Service</a></li>
+                            <li><a href="#" class="text-white">Privacy Policy</a></li>
+                            <li><a href="#" class="text-white">Terms of Purchase</a></li>
+                            <li><a href="#" class="text-white">Acceptable Use Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="solid" style="background-color: #ffffff; width: 1906px; position: relative; right: 400px; bottom: 25px;">
+                <p style="position: relative; bottom: 25px;">&copy; 2024 HomeBound (Malaysia) Sdn. Bhd. 201001036744 (920667-W) All rights reserved</p>
+            </div>
+        </footer>
+    </body>
+</html>

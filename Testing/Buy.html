@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Buy Property</title>
+        <link href="https://fonts.googleapis.com/css2?family=Allison&display=swap" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            /* Existing CSS */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #F5F5F5;
+            }
+
+            .logo {
+                font-family: 'Allison', cursive;
+                font-size: 40px;
+                color: #000000;
+                -webkit-text-stroke: 1px #005F73;
+            }
+
+            .profile-pic {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: 3px solid #2C3E50;
+            }
+
+            .section1 {
+                background-color: #005F73;
+                color: white;
+                padding: 40px 0;
+                text-align: center;
+            }
+
+            .property-img {
+                border-radius: 16px 16px 0 0;
+            }
+
+            .bottominfo {
+                background-color: #ffffff;
+                color: #000000;
+                border-radius: 0 0 16px 16px;
+                padding: 16px;
+                position: relative;
+            }
+
+            .card {
+                border: none; 
+                border-radius: 15px;
+                overflow: hidden;
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+
+            .card:hover {
+                transform: scale(1.025);
+                box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+            }
+
+            .filter-form {
+                padding: 20px;
+                background-color: #ffffff;
+                border-radius: 10px;
+                margin-bottom: 20px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            }
+
+            .filter-form h5 {
+                color: #005F73;
+                font-weight: bold;
+                margin-bottom: 15px;
+            }
+
+            .filter-form label {
+                font-weight: bold;
+                color: #4a4a4a;
+            }
+
+            .filter-form .form-control, .btn-apply-filter {
+                border-radius: 8px;
+            }
+
+            .btn-apply-filter {
+                background-color: #005F73;
+                color: white;
+                font-size: 16px;
+                padding: 10px 20px;
+                width: 100%;
+            }
+
+            .btn-apply-filter:hover {
+                background-color: #003f4d;
+            }
+
+            footer {
+                background-color: #2C3E50;
+                color: white;
+                padding: 40px 0;
+                text-align: center;
+                height: 245px;
+            }
+
+            .pagination_container {
+                text-align: center;
+            }
+            
+            .pagination {
+                display: inline-flex;
+                list-style: none;
+                border-radius: 8px;
+                overflow: hidden;
+                font-family: Arial, sans-serif;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                margin: 20px auto;
+            }
+
+            .pagination a {
+                color: #4a4a4a;
+                padding: 10px 18px;
+                text-decoration: none;
+                background: linear-gradient(to bottom, #ffffff, #f1f1f1);
+                border-right: 1px solid #ddd;
+                transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- HEADER -->
+        <header class="d-flex justify-content-between align-items-center p-3 shadow-sm" style="height: 70px;">
+            <div class="logo ml-3">HomeBound</div>
+            <nav class="nav" style="position: relative; right: 30px;">
+                <a class="nav-link font-weight-bold text-dark" href="AboutUs.html">About Us</a>
+                <a class="nav-link font-weight-bold text-dark" href="Buy.html">Buy</a>
+                <a class="nav-link font-weight-bold text-dark" href="Rent.html">Rent</a>
+                <a class="nav-link font-weight-bold text-dark" href="FindAgent.html">Find Agent</a>
+                <a class="nav-link font-weight-bold text-dark" href="Mortgages.html">Mortgages</a>
+                <a class="nav-link font-weight-bold text-dark" href="ContactUs.html">Contact Us</a>
+            </nav>
+            <a href="UserProfile.html" target="_blank">
+				<img src="pfp.jpg" alt="Profile Picture" class="profile-pic mr-3">
+			</a>
+        </header>       
+
+        <!-- FILTER FORM -->
+        <div class="container filter-form" style="margin-top: 16px;">
+            <h5>Filter Properties</h5>
+            <div class="row">
+                <div class="col-md-3">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="property-type">Property Type</label>
+                    <input type="text" id="property-type" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="price-range">Price Range (Min - Max)</label>
+                    <input type="text" id="price-range" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label for="rooms">Rooms</label>
+                    <input type="number" id="rooms" class="form-control" min="1">
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-3">
+                    <label for="furnishing">Furnishing</label>
+                    <select id="furnishing" class="form-control">
+                        <option value="">Any</option>
+                        <option value="Furnished">Furnished</option>
+                        <option value="Unfurnished">Unfurnished</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="bathrooms">Bathrooms</label>
+                    <input type="number" id="bathrooms" class="form-control" min="1">
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-apply-filter mt-4" onclick="applyFilter()">Apply Filter</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROPERTY LISTINGS -->
+        <div class="container">
+            <div class="row" id="property-list">
+                <!-- Property cards will be injected here -->
+            </div>
+        </div>
+
+       <!-- FOOTER -->
+        <footer class="text-white pt-4">
+            <div class="container">
+                <div class="row" style="width: 1425px;">
+                    <div class="col-md-4">
+                        <ul class="list-unstyled text-left">
+                            <li><a href="#" class="text-white">About Us</a></li>
+                            <li><a href="#" class="text-white">Our Products</a></li>
+                            <li><a href="#" class="text-white">Careers</a></li>
+                            <li><a href="#" class="text-white">Newsroom</a></li>
+                            <li><a href="#" class="text-white">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <ul class="list-unstyled text-left">
+                            <li><a href="#" class="text-white">Share Feedback</a></li>
+                            <li><a href="#" class="text-white">Mortgage Tools</a></li>
+                            <li><a href="#" class="text-white">Agent Directory</a></li>
+                            <li><a href="#" class="text-white">Property Guides</a></li>
+                            <li><a href="#" class="text-white">Properties For Buy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <ul class="list-unstyled text-left">
+                            <li><a href="#" class="text-white">Properties For Rent</a></li>
+                            <li><a href="#" class="text-white">Terms of Service</a></li>
+                            <li><a href="#" class="text-white">Privacy Policy</a></li>
+                            <li><a href="#" class="text-white">Terms of Purchase</a></li>
+                            <li><a href="#" class="text-white">Acceptable Use Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="solid" style="background-color: #ffffff; width: 1906px; position: relative; right: 400px; bottom: 25px;">
+                <p style="position: relative; bottom: 25px;">&copy; 2024 HomeBound (Malaysia) Sdn. Bhd. 201001036744 (920667-W) All rights reserved</p>
+            </div>
+        </footer>
+
+        <!-- SCRIPTS -->
+        <script>
+            const properties = [
+                {
+                    image: "https://sg1-cdn.pgimgs.com/projectnet-project/153053/ZPPHO.138530033.R550X550.png",
+                    title: "Residensi 38 Bangsar",
+                    address: "Bangsar Baru",
+                    location: "Kuala Lumpur",
+                    price: "RM763,333",
+                    completion: "2024",
+                    rooms: 3,
+                    bathrooms: 3,
+                    furnishing: "Furnished",
+                    posted: "3 days ago",
+                    agent: { name: "Hyein Grace", image: "agent.jpg" }
+                },
+                {
+                    image: "https://my1-cdn.pgimgs.com/project-listing-project/39956948/PLPHO.231982803.V800/Summerwoods-Kajang-Malaysia.jpg",
+                    title: "Summerwoods",
+                    address: "Jade Hills, Kajang",
+                    location: "Kuala Lumpur",
+                    price: "RM3,917,800",
+                    completion: "2024",
+                    rooms: 5,
+                    bathrooms: 6,
+                    furnishing: "Unfurnished",
+                    posted: "3 days ago",
+                    agent: { name: "Hyein Grace", image: "agent.jpg" }
+                },
+				{
+                    image: "https://my1-cdn.pgimgs.com/project-listing-project/40950675/PLPHO.247993902.V800/Hampton-Height-Damansara-Country-Heights-Damansara-Malaysia.jpg",
+                    title: "Hampton Height Damansara",
+                    address: "Country Heights Damansara",
+                    location: "Kuala Lumpur",
+                    price: "RM655,200",
+                    completion: "2024",
+                    rooms: 2,
+                    bathrooms: 2,
+                    furnishing: "Unfurnished",
+                    posted: "3 days ago",
+                    agent: { name: "Hyein Grace", image: "agent.jpg" }
+                },
+				{
+                    image: "https://my1-cdn.pgimgs.com/project-listing-project/36634439/PLPHO.200370751.V800/Citrine-Hills-Double-Storey-Terrace-House-BBKP-Johor-Bahru-Malaysia.jpg",
+                    title: "Citrine Hills",
+                    address: "Bandar Baru Kangkar Pulai",
+                    location: "Johor",
+                    price: "RM518,000",
+                    completion: "2024",
+                    rooms: 4,
+                    bathrooms: 3,
+                    furnishing: "Unfurnished",
+                    posted: "3 days ago",
+                    agent: { name: "Hyein Grace", image: "agent.jpg" }
+                },
+				{
+                    image: "https://my1-cdn.pgimgs.com/project-listing-project/40661455/PLPHO.239111850.V800/Savvy-Riana-Dutamas-Segambut-Malaysia.jpg",
+                    title: "Savvy",
+                    address: "Riana Dutamas, Segambut",
+                    location: "Kuala Lumpur",
+                    price: "RM601,621",
+                    completion: "2024",
+                    rooms: 3,
+                    bathrooms: 2,
+                    furnishing: "Unfurnished",
+                    posted: "3 days ago",
+                    agent: { name: "Hyein Grace", image: "agent.jpg" }
+                },
+				{
+                    image: "https://my1-cdn.pgimgs.com/project-listing-project/39957517/PLPHO.231988364.V800/LSH33-Sentul-Malaysia.jpg",
+                    title: "Laman Seri Harmoni 33",
+                    address: "Sentul Pasar, Sentul",
+                    location: "Kuala Lumpur",
+                    price: "RM475,000",
+                    completion: "2024",
+                    rooms: 3,
+                    bathrooms: 2,
+                    furnishing: "Unfurnished",
+                    posted: "3 days ago",
+                    agent: { name: "Hyein Grace", image: "agent.jpg" }
+                },
+            ];
+
+            function displayProperties(properties) {
+                const propertyList = document.getElementById('property-list');
+                propertyList.innerHTML = '';
+
+                properties.forEach(property => {
+                    const card = `
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="${property.image}" class="card-img-top property-img" alt="Property Image" style="height: 200px;">
+                                <div class="bottominfo p-3">
+                                    <p class="mb-1 font-weight-bold">${property.title}</p>
+                                    <p class="mb-1">${property.address}, ${property.location}</p>
+                                    <p class="mb-1">${property.price}</p>
+                                    <p class="mb-1">Rooms: ${property.rooms} | Bathrooms: ${property.bathrooms}</p>
+                                    <p class="mb-1">Furnishing: ${property.furnishing}</p>
+                                    <p class="mb-1">Posted: ${property.posted}</p>
+                                    <div class="d-flex align-items-center mt-3">
+                                        <img src="${property.agent.image}" alt="Agent Image" style="width: 40px; height: 40px; border-radius: 50%;" class="mr-2">
+                                        <p class="mb-0 font-weight-bold">${property.agent.name}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    propertyList.innerHTML += card;
+                });
+            }
+
+            function applyFilter() {
+                const location = document.getElementById('location').value.toLowerCase();
+                const propertyType = document.getElementById('property-type').value.toLowerCase();
+                const rooms = document.getElementById('rooms').value;
+                const bathrooms = document.getElementById('bathrooms').value;
+                const furnishing = document.getElementById('furnishing').value.toLowerCase();
+                const filteredProperties = properties.filter(property => {
+                    return (!location || property.location.toLowerCase().includes(location)) &&
+                           (!propertyType || property.title.toLowerCase().includes(propertyType)) &&
+                           (!rooms || property.rooms == rooms) &&
+                           (!bathrooms || property.bathrooms == bathrooms) &&
+                           (!furnishing || property.furnishing.toLowerCase().includes(furnishing));
+                });
+                displayProperties(filteredProperties);
+            }
+
+            window.onload = function() {
+                displayProperties(properties);
+            };
+        </script>
+    </body>
+</html>

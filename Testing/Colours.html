@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Latest Projects</title>
+        <link href="https://fonts.googleapis.com/css2?family=Allison&display=swap" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #F5F5F5;
+            }
+
+            .logo {
+                font-family: 'Allison', cursive;
+                font-size: 40px;
+                color: #000000;
+                -webkit-text-stroke: 1px #005F73;
+            }
+
+            .profile-pic {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: 3px solid #2C3E50;
+            }
+
+            .section1 {
+                background-color: #005F73;
+                color: white;
+                padding: 40px 0;
+                text-align: center;
+            }
+
+            .property-img {
+                border-radius: 16px 16px 0 0;
+            }
+
+            .bottominfo {
+                background-color: #ffffff;
+                color: #000000;
+                border-radius: 0 0 16px 16px;
+                padding: 16px;
+            }
+
+            .card {
+                border: none; 
+                border-radius: 15px;
+                overflow: hidden;
+            }
+			
+			.card:hover {
+			  transform: scale(1.025); 
+			}
+			
+			.btn-primary:hover {
+			  transform: scale(1.025); 
+			  filter: brightness(75%);
+			}
+
+            footer {
+                background-color: #2C3E50;
+                color: white;
+                padding: 40px 0;
+                text-align: center;
+                height: 245px;
+            }
+
+            .filter-btn {
+                border: 1px solid #000000;
+                background-color: #ffffff;
+                color: #000000;
+            }
+
+            .filter-btn.active {
+                background-color: #005F73;
+                border-color: #000000;
+                color: #ffffff;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- HEADER -->
+        <header class="d-flex justify-content-between align-items-center p-3 shadow-sm" style="height: 70px;">
+            <div class="logo ml-3">HomeBound</div>
+            <nav class="nav" style="position: relative; right: 30px;">
+                <a class="nav-link font-weight-bold text-dark" href="AboutUs.html">About Us</a>
+                <a class="nav-link font-weight-bold text-dark" href="Buy.html">Buy</a>
+                <a class="nav-link font-weight-bold text-dark" href="Rent.html">Rent</a>
+                <a class="nav-link font-weight-bold text-dark" href="FindAgent.html">Find Agent</a>
+                <a class="nav-link font-weight-bold text-dark" href="Mortgages.html">Mortgages</a>
+                <a class="nav-link font-weight-bold text-dark" href="ContactUs.html">Contact Us</a>
+            </nav>
+            <a href="UserProfile.html" target="_blank">
+				<img src="pfp.jpg" alt="Profile Picture" class="profile-pic mr-3">
+			</a>
+        </header>    
+
+        <!-- SECTION 1 -->
+        <section class="section1">
+            <h2>FIND YOUR FUTURE HOME</h2>
+            <p>Explore new and upcoming property launches in Malaysia</p>
+        </section>
+
+        <!-- SECTION 2 -->
+        <section class="py-4 text-center">
+            <h2>Filter By State</h2>
+            <div class="d-flex justify-content-center">
+                <button class="filter-btn btn px-3 py-2 mx-1 active">All</button>
+                <button class="filter-btn btn px-3 py-2 mx-1">Kuala Lumpur</button>
+                <button class="filter-btn btn px-3 py-2 mx-1">Penang</button>
+                <button class="filter-btn btn px-3 py-2 mx-1">Johor</button>
+            </div>
+        </section>
+
+        <!-- SECTION 3 -->
+        <section class="py-4 text-center">
+            <h2>Projects With Upcoming Sales Launch</h2>
+            <p>Not available for purchase yet. Stay updated!</p>
+        </section>
+
+        <!-- PROPERTY LISTINGS -->
+        <div class="container">
+            <div class="row" id="property-list">
+                <!-- Property cards will be injected here -->
+            </div>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center my-4">
+            <button type="button" class="btn btn-primary" style="background-color: #F4A261; border: none; color: #000000;">
+                Load More (27)
+            </button>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="text-white pt-4">
+            <div class="container">
+                <div class="row" style="width: 1425px;">
+                    <div class="col-md-4">
+                        <ul class="list-unstyled text-left">
+                            <li><a href="#" class="text-white">About Us</a></li>
+                            <li><a href="#" class="text-white">Our Products</a></li>
+                            <li><a href="#" class="text-white">Careers</a></li>
+                            <li><a href="#" class="text-white">Newsroom</a></li>
+                            <li><a href="#" class="text-white">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <ul class="list-unstyled text-left">
+                            <li><a href="#" class="text-white">Share Feedback</a></li>
+                            <li><a href="#" class="text-white">Mortgage Tools</a></li>
+                            <li><a href="#" class="text-white">Agent Directory</a></li>
+                            <li><a href="#" class="text-white">Property Guides</a></li>
+                            <li><a href="#" class="text-white">Properties For Buy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <ul class="list-unstyled text-left">
+                            <li><a href="#" class="text-white">Properties For Rent</a></li>
+                            <li><a href="#" class="text-white">Terms of Service</a></li>
+                            <li><a href="#" class="text-white">Privacy Policy</a></li>
+                            <li><a href="#" class="text-white">Terms of Purchase</a></li>
+                            <li><a href="#" class="text-white">Acceptable Use Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="solid" style="background-color: #ffffff; width: 1906px; position: relative; right: 400px; bottom: 25px;">
+                <p style="position: relative; bottom: 25px;">&copy; 2024 HomeBound (Malaysia) Sdn. Bhd. 201001036744 (920667-W) All rights reserved</p>
+            </div>
+        </footer>
+
+        
+        <!--SCRIPTS-->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+            // JavaScript to toggle the active class
+            document.querySelectorAll('.filter-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                    // Add active class to the clicked button
+                    this.classList.add('active');
+                });
+            });
+        </script>
+
+        <script>
+            // Array of property objects
+            const properties = [
+                {
+                    image: "https://sg1-cdn.pgimgs.com/projectnet-project/153053/ZPPHO.138530033.R550X550.png",
+                    title: "Residensi 38 Bangsar",
+                    address: "Jalan Bangsar Utama 1, Bangsar Baru, ...",
+                    price: "RM763,333",
+                    completion: "2024"
+                },
+                {
+                    image: "https://my1-cdn.pgimgs.com/project-listing-project/39956948/PLPHO.231982803.R1500X1500/Summerwoods-Kajang-Malaysia.jpg",
+                    title: "Summerwoods",
+                    address: "Jade Hills, Kajang, Selangor",
+                    price: "RM3,917,800",
+                    completion: "2024"
+                },
+                {
+                    image: "https://my1-cdn.pgimgs.com/project-listing-project/40950675/PLPHO.247993902.V800/Hampton-Height-Damansara-Country-Heights-Damansara-Malaysia.jpg",
+                    title: "Hampton Height Damansara",
+                    address: "Persiaran Tecoma, Country Heights ...",
+                    price: "RM655,200",
+                    completion: "2024"
+                },
+                {
+                    image: "https://my1-cdn.pgimgs.com/project-listing-project/36634439/PLPHO.200370751.V800/Citrine-Hills-Double-Storey-Terrace-House-BBKP-Johor-Bahru-Malaysia.jpg",
+                    title: "Citrine Hills",
+                    address: "Bandar Baru Kangkar Pulai, Johor Bahru, ...",
+                    price: "RM518,000",
+                    completion: "2024"
+                },
+                {
+                    image: "https://my1-cdn.pgimgs.com/project-listing-project/39957517/PLPHO.231988364.V800/LSH33-Sentul-Malaysia.jpg",
+                    title: "Laman Seri Harmoni 33",
+                    address: "Sentul Pasar, Sentul, Kuala Lumpur",
+                    price: "RM475,000",
+                    completion: "2024"
+                },
+                {
+                    image: "https://my1-cdn.pgimgs.com/project-listing-project/31199318/PLPHO.238259228.V800/MiNest-Residence-Sentul-Malaysia.jpg",
+                    title: "MiNest Residence",
+                    address: "Jalan Sinar Sentul, Sentul, Kuala Lumpur",
+                    price: "RM628,800",
+                    completion: "2024"
+                },
+                {
+                    image: "https://my1-cdn.pgimgs.com/project-listing-project/40665831/PLPHO.239154591.V800/Mezzo-Gelugor-Malaysia.jpg",
+                    title: "Mezzo",
+                    address: "Suite 16-01, Menara IJM Land, ...",
+                    price: "RM1,042,000",
+                    completion: "2025"
+                },
+                {
+                    image: "https://my1-cdn.pgimgs.com/project-listing-project/40712926/PLPHO.239632607.V800/ViO-Banj-ran-Seremban-Malaysia.jpg",
+                    title: "ViO Banj'ran",
+                    address: "PT10786, Seremban 2, Seremban, ...",
+                    price: "RM3,548,800",
+                    completion: "2025"
+                },
+                {
+                    image: "https://my1-cdn.pgimgs.com/project-listing-project/42201413/PLPHO.255193414.R1500X1500/PRISTINE-PREMIER-Nilai-Malaysia.jpg",
+                    title: "Pristine Premier",
+                    address: "Nilai, Negeri Sembilan",
+                    price: "RM571,295",
+                    completion: "2025"
+                },
+            ];
+            
+            // Function to create property cards
+            function displayProperties(properties) {
+                const propertyList = document.getElementById('property-list');
+                propertyList.innerHTML = ''; // Clear any existing content
+            
+                properties.forEach(property => {
+                    const card = `
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="${property.image}" class="card-img-top property-img" alt="Property Image" style="width: auto; height: 200px;">
+                                <div class="bottominfo">
+                                    <p class="mb-1" style="font-weight: bold; font-size: 18px;">${property.title}</p>
+                                    <p class="mb-1" style="color: #555555;">${property.address}</p>
+                                    <p class="mb-1" style="color: #555555;">${property.price}</p>
+                                    <p style="color: #555555;">Completion: ${property.completion}</p>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    propertyList.innerHTML += card; // Append the card to the property list
+                });
+            }
+            
+            // Call the function to display the properties
+            displayProperties(properties);
+            </script>
+    </body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgages</title>
+    <link href="https://fonts.googleapis.com/css2?family=Allison&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F5F5F5;
+        }
+
+        .logo {
+            font-family: 'Allison', cursive;
+            font-size: 40px;
+            color: #000000;
+            -webkit-text-stroke: 1px #005F73;
+        }
+
+        .profile-pic {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 3px solid #2C3E50;
+        }
+
+        footer {
+            background-color: #2C3E50;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            height: 245px;
+        }
+
+        .section {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #005F73;
+        }
+
+        .button-calculate {
+            background-color: #005F73;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .card {
+            margin: 10px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+			text-align: left;
+        }
+
+        .card img {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+			width: auto;
+			height: 175px;
+        }
+
+        .btn-enquire {
+            background-color: #005F73;
+            color: white;
+        }
+
+        .faq {
+            text-align: left;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+	<header class="d-flex justify-content-between align-items-center p-3 shadow-sm" style="height: 70px;">
+		<div class="logo ml-3">HomeBound</div>
+		<nav class="nav" style="position: relative; right: 30px;">
+			<a class="nav-link font-weight-bold text-dark" href="AboutUs.html">About Us</a>
+			<a class="nav-link font-weight-bold text-dark" href="Buy.html">Buy</a>
+			<a class="nav-link font-weight-bold text-dark" href="Rent.html">Rent</a>
+			<a class="nav-link font-weight-bold text-dark" href="FindAgent.html">Find Agent</a>
+			<a class="nav-link font-weight-bold text-dark" href="Mortgages.html">Mortgages</a>
+			<a class="nav-link font-weight-bold text-dark" href="ContactUs.html">Contact Us</a>
+		</nav>
+		<a href="UserProfile.html" target="_blank">
+			<img src="pfp.jpg" alt="Profile Picture" class="profile-pic mr-3">
+		</a>
+	</header>    
+
+    <!-- SECTION 1: Discover Your Home Budget -->
+    <div class="section">
+        <h2 class="section-title">Discover your home loan with confidence</h2>
+
+        <!-- Calculation Form -->
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form id="budgetCalculator">
+                        <div class="form-group" style="padding-bottom: 8px;">
+                            <label for="income">Monthly Income (RM):</label>
+                            <input type="number" class="form-control" id="income" placeholder="Enter your monthly income in RM" required>
+                        </div>
+                        <div class="form-group" style="padding-bottom: 8px;">
+                            <label for="commitments">Monthly Commitments (RM):</label>
+                            <input type="number" class="form-control" id="commitments" placeholder="Enter your total monthly commitments in RM" required>
+                        </div>
+                        <div class="form-group" style="padding-bottom: 8px;">
+                            <label for="interestRate">Interest Rate (%):</label>
+                            <input type="number" class="form-control" id="interestRate" placeholder="Enter the interest rate as a percentage" required>
+                        </div>
+                        <div class="form-group" style="padding-bottom: 8px;">
+                            <label for="loanTerm">Loan Term (Years):</label>
+                            <input type="number" class="form-control" id="loanTerm" placeholder="Enter the loan term in years" required>
+                        </div>
+                        <button type="button" class="button-calculate" onclick="calculateBudget()">Calculate Now</button>
+                    </form>
+                    <div class="mt-4" id="result" style="font-size: 18px; color: #005F73;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 2: How It Works -->
+    <div class="section">
+        <h2 class="section-title">How It Works</h2>
+        <ol class="text-left mx-auto" style="max-width: 600px;">
+            <li><strong>Step 1:</strong> Tell us about yourself. Answer questions about your income and commitments to help us understand your financial situation.</li>
+            <li><strong>Step 2:</strong> View your estimated loan eligibility. Understand how much you can borrow based on your Debt Servicing Ratio (DSR).</li>
+            <li><strong>Step 3:</strong> Make smart decisions. Continue your home search with a clear budget in mind.</li>
+        </ol>
+    </div>
+
+    <!-- SECTION 3: Featured Home Loans -->
+    <div class="section">
+        <h2 class="section-title">Featured Home Loans</h2>
+        <div class="d-flex flex-wrap justify-content-center">
+            <!-- Home Loan Card Template -->
+            <div class="card" style="width: 20rem;">
+                <img src="https://cdn.pgimgs.com/pgfinance/banks/logo/logo_rhb.svg" class="card-img-top" alt="Loan Logo" style="padding: 16px;">
+                <div class="card-body">
+                    <h5 class="card-title">SBR Rate: 2.55%</h5>
+                    <h6>Package Benefits:</h6>
+                    <ul>
+                        <li>No processing fee</li>
+                        <li>Flexible repayment options</li>
+                        <li>Quick approval</li>
+                    </ul>
+                    <button class="btn btn-enquire" style="position: relative; top: 50px; left: 4px; width: 270px;">Enquire Now</button>
+                </div>
+            </div>
+
+            <div class="card" style="width: 20rem;">
+                <img src="https://cdn.pgimgs.com/pgfinance/banks/logo/logo_scb.svg" class="card-img-top" alt="Loan Logo" style="padding: 16px;">
+                <div class="card-body">
+                    <h5 class="card-title">SBR Rate: 2.75%</h5>
+                    <h6>Package Benefits:</h6>
+                    <ul>
+                        <li>Zero early repayment penalties</li>
+                        <li>Insurance coverage included</li>
+                        <li>Online account management</li>
+                    </ul>
+                    <button class="btn btn-enquire" style="position: relative; top: 50px; left: 4px; width: 270px;">Enquire Now</button>
+                </div>
+            </div>
+			
+			<div class="card" style="width: 20rem;">
+                <img src="https://cdn.pgimgs.com/pgfinance/banks/logo/logo_ocbc.svg" class="card-img-top" alt="Loan Logo" style="padding: 16px;">
+                <div class="card-body">
+                    <h5 class="card-title">SBR Rate: 3.90%</h5>
+                    <h6>Package Benefits:</h6>
+                    <ul>
+                        <li>Flexible choice of facility as a term loan, overdraft or a combination of both.</li>
+                        <li>Ability to redraw funds that have been repaid</li>
+                    </ul>
+                    <button class="btn btn-enquire" style="position: relative; top: 2px; left: 4px; width: 270px;">Enquire Now</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- SECTION 4: Latest Home Loan Guides -->
+    <div class="section">
+        <h2 class="section-title">Latest Home Loan Guides</h2>
+        <div class="d-flex flex-wrap justify-content-center">
+            <!-- Guide Card Template -->
+            <div class="card" style="width: 18rem; height: 315px;">
+                <img src="https://cdn-cms.pgimgs.com/static/2019/11/guide-home-loan-mainimage.jpg" class="card-img-top" alt="Guide Image">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: 18px;">Everything You Need To Know About Home Loans In Malaysia!</h5>
+                    <p class="text-muted">1 Nov 2024</p>
+                </div>
+            </div>
+            <!-- Repeat the card above for a total of 4 cards -->
+            <div class="card" style="width: 18rem; height: 315px;">
+                <img src="https://img.iproperty.com.my/angel-legacy/520x300-crop/static/2020/06/home-loan-salary-mainimage.jpg" class="card-img-top" alt="Guide Image">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: 18px;">How Much Home Loan Can You Get Based On Your Salary In Malaysia?</h5>
+                    <p class="text-muted">27 Oct 2024</p>
+                </div>
+            </div>
+            <!-- Add more cards as needed -->
+        </div>
+    </div>
+
+    <!-- SECTION 5: FAQ -->
+    <div class="section">
+        <h2 class="section-title">FAQ</h2>
+        <div class="faq">
+            <h5>What is a mortgage?</h5>
+            <p>A mortgage is a loan specifically for purchasing property, where the property itself serves as collateral.</p>
+            <h5>How do I know how much I can borrow?</h5>
+            <p>Your borrowing capacity is determined by your income, credit history, and overall financial commitments.</p>
+            <h5>What are the fees associated with mortgages?</h5>
+            <p>Common fees include application fees, valuation fees, and legal fees, but many lenders offer fee waivers.</p>
+            <h5>How long does it take to get approved?</h5>
+            <p>Approval times can vary but typically range from a few days to several weeks, depending on the lender and complexity of your application.</p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+	<footer class="text-white pt-4">
+		<div class="container">
+			<div class="row" style="width: 1425px;">
+				<div class="col-md-4">
+					<ul class="list-unstyled text-left">
+						<li><a href="#" class="text-white">About Us</a></li>
+						<li><a href="#" class="text-white">Our Products</a></li>
+						<li><a href="#" class="text-white">Careers</a></li>
+						<li><a href="#" class="text-white">Newsroom</a></li>
+						<li><a href="#" class="text-white">Contact Us</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4 mb-4">
+					<ul class="list-unstyled text-left">
+						<li><a href="#" class="text-white">Share Feedback</a></li>
+						<li><a href="#" class="text-white">Mortgage Tools</a></li>
+						<li><a href="#" class="text-white">Agent Directory</a></li>
+						<li><a href="#" class="text-white">Property Guides</a></li>
+						<li><a href="#" class="text-white">Properties For Buy</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4 mb-4">
+					<ul class="list-unstyled text-left">
+						<li><a href="#" class="text-white">Properties For Rent</a></li>
+						<li><a href="#" class="text-white">Terms of Service</a></li>
+						<li><a href="#" class="text-white">Privacy Policy</a></li>
+						<li><a href="#" class="text-white">Terms of Purchase</a></li>
+						<li><a href="#" class="text-white">Acceptable Use Policy</a></li>
+					</ul>
+				</div>
+			</div>
+			<hr class="solid" style="background-color: #ffffff; width: 1906px; position: relative; right: 400px; bottom: 25px;">
+			<p style="position: relative; bottom: 25px;">&copy; 2024 HomeBound (Malaysia) Sdn. Bhd. 201001036744 (920667-W) All rights reserved</p>
+		</div>
+	</footer>
+	
+	<script>
+        function calculateBudget() {
+            const income = parseFloat(document.getElementById('income').value);
+            const commitments = parseFloat(document.getElementById('commitments').value);
+            const interestRate = parseFloat(document.getElementById('interestRate').value) / 100 / 12;
+            const loanTerm = parseFloat(document.getElementById('loanTerm').value) * 12;
+
+            const maxAffordablePayment = (income - commitments) * 0.3;
+            const loanAmount = maxAffordablePayment / (interestRate / (1 - Math.pow(1 + interestRate, -loanTerm)));
+
+            document.getElementById('result').innerHTML = `You can afford a loan amount up to approximately RM ${loanAmount.toFixed(2)}.`;
+        }
+    </script>
+
+</body>
+</html>
